@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>aa</h1>
+        <h1>bb</h1>
+        <h1 id="h3id"><span>3</span></h1>
+        <h1>dd</h1>
+        <h1>ee</h1>
+    </div>
+</body>
+<script>
+    // $("h1").click(function(){
+        // var idx = $(this).index("h1");
+        // $(this).text($(this).text()+idx);
+    // });
+
+    //js元素对象转成jQuery对象
+    var objs = document.getElemntsByTagName("h1");
+    $(objs).css("color","red");
+
+    //jQuery对象转成js元素对象
+    alert($("#h3id").get(0).outerHTML);
+    //$(this).get(0)与$(this)[0]等价；
+    $("h1").get(0).style.color = 'red';
+
+    //data('idx','i');向一个标签身上藏一些东西，但不会改变标签本身属性
+
+</script>
+</html>
